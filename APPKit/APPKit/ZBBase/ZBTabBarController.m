@@ -16,6 +16,13 @@
 
 @implementation ZBTabBarController
 
++ (void)initialize
+{
+    [super initialize];
+    UITabBar *tabar = [UITabBar appearance];
+    [tabar setBarTintColor:[UIColor yellowColor]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -36,7 +43,7 @@
     
     
     ZBViewController *more = [[ZBViewController alloc] init];
-    [self addOneController:more title:@"我" imageName:@"personal_center_normal" selectedImageName:[NSString stringWithFormat:@"personal_center_pressed"] tag:4];
+    [self addOneController:more title:@"我" imageName:@"moreNormalIcon" selectedImageName:[NSString stringWithFormat:@"moreHighLightIcon"] tag:4];
 
     // Do any additional setup after loading the view.
 }
@@ -49,10 +56,14 @@
     barItem.selectedImage = [UIImage imageNamed:selectedImageName];
     barItem.image = [UIImage imageNamed:imageName];
     barItem.badgeValue = @"2";
+    barItem.imageInsets = UIEdgeInsetsMake(10.0f, 0, 0, 0);
     [self selectedTapTabBarItems:barItem];
     [self unSelectedTapTabBarItems:barItem];
+
     
-    viewCotroller.tabBarItem = barItem;
+    //加载图片时才用不渲染模式，否则图片会默认被渲染为蓝色
+    viewCotroller.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[[UIImage imageNamed:imageName]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    viewCotroller.tabBarItem.badgeValue = @"9";
     viewCotroller.navigationItem.title = title;
     ZBNavigationController *nav = [[ZBNavigationController alloc] initWithRootViewController:viewCotroller];
     [self addChildViewController:nav];
