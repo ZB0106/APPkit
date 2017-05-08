@@ -8,6 +8,9 @@
 
 #import "ZBViewController.h"
 
+#import "ZBUploadRequest.h"
+#import "NSObject+zb_request.h"
+
 @interface ZBViewController ()
 
 @end
@@ -16,6 +19,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSObject *obj = [[NSObject alloc] init];
+    obj.zb_method = ZB_RequestMethodGET;
+    
+    obj.zb_parameters = @{@"fdaf":@"111111"};
+    ZBUploadRequest *up = [ZBUploadRequest upLoadWithfileData:nil name:@"hahahahha" fileName:@"" mimeType:@""];
+    obj.uploadRequest = up;
+    
+    NSLog(@"%@%@%@%@",@(obj.zb_method),obj.zb_parameters,obj.uploadRequest.name,up.name);
     // Do any additional setup after loading the view.
 }
 

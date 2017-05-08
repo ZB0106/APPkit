@@ -10,4 +10,7 @@
 
 @interface ZBBaseViewModel : NSObject
 
+
+
+
 @end
