@@ -53,17 +53,16 @@
 - (void)addOneController:(ZBViewController *)viewCotroller title:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName tag:(NSInteger)tag
 {
     UITabBarItem *barItem = [[UITabBarItem alloc] init];
-    barItem.selectedImage = [UIImage imageNamed:selectedImageName];
-    barItem.image = [UIImage imageNamed:imageName];
+    barItem.selectedImage = [[UIImage imageNamed:imageName]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    barItem.image = [[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     barItem.badgeValue = @"2";
-    barItem.imageInsets = UIEdgeInsetsMake(10.0f, 0, 0, 0);
+//    barItem.imageInsets = UIEdgeInsetsMake(5.0f, 0, 0, 0);
     [self selectedTapTabBarItems:barItem];
     [self unSelectedTapTabBarItems:barItem];
 
     
     //加载图片时才用不渲染模式，否则图片会默认被渲染为蓝色
-    viewCotroller.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:[[UIImage imageNamed:imageName]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    viewCotroller.tabBarItem.badgeValue = @"9";
+    viewCotroller.tabBarItem = barItem;
     viewCotroller.navigationItem.title = title;
     ZBNavigationController *nav = [[ZBNavigationController alloc] initWithRootViewController:viewCotroller];
     [self addChildViewController:nav];
