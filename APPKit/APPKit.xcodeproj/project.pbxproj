@@ -21,6 +21,8 @@
 		049FD7BB1EBF12A6000ED538 /* ZBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049FD7B31EBF12A6000ED538 /* ZBTabBarController.m */; };
 		049FD7BE1EBF152A000ED538 /* ZBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049FD7BD1EBF152A000ED538 /* ZBBaseViewController.m */; };
 		163F7BE85CCAA22651D8B833 /* libPods-APPKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2041B74CA821AFABB054B5DE /* libPods-APPKit.a */; };
+		2146C5681F0E0D9100185388 /* ZB_NSProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2146C5671F0E0D9100185388 /* ZB_NSProxy.m */; };
+		2146C56C1F0E12B400185388 /* ZB_BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2146C56B1F0E12B400185388 /* ZB_BaseTableViewCell.m */; };
 		219050AE1F0CCA2100E77627 /* ZBThreadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 219050AD1F0CCA2100E77627 /* ZBThreadManager.m */; };
 		21AD9B481EC04CAD0007CDCD /* ZBBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AD9B471EC04CAD0007CDCD /* ZBBaseTableView.m */; };
 		21AD9B4B1EC051B30007CDCD /* ZBBaseRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AD9B4A1EC051B30007CDCD /* ZBBaseRequestModel.m */; };
@@ -75,8 +77,12 @@
 		049FD7BC1EBF152A000ED538 /* ZBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBBaseViewController.h; sourceTree = "<group>"; };
 		049FD7BD1EBF152A000ED538 /* ZBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBBaseViewController.m; sourceTree = "<group>"; };
 		2041B74CA821AFABB054B5DE /* libPods-APPKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-APPKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		219050AC1F0CCA2100E77627 /* ZBThreadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBThreadManager.h; sourceTree = "<group>"; };
-		219050AD1F0CCA2100E77627 /* ZBThreadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBThreadManager.m; sourceTree = "<group>"; };
+		2146C5661F0E0D9100185388 /* ZB_NSProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZB_NSProxy.h; path = ../ZB_NSProxy.h; sourceTree = "<group>"; };
+		2146C5671F0E0D9100185388 /* ZB_NSProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZB_NSProxy.m; path = ../ZB_NSProxy.m; sourceTree = "<group>"; };
+		2146C56A1F0E12B400185388 /* ZB_BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZB_BaseTableViewCell.h; sourceTree = "<group>"; };
+		2146C56B1F0E12B400185388 /* ZB_BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZB_BaseTableViewCell.m; sourceTree = "<group>"; };
+		219050AC1F0CCA2100E77627 /* ZBThreadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBThreadManager.h; path = ../ZBThreadManager.h; sourceTree = "<group>"; };
+		219050AD1F0CCA2100E77627 /* ZBThreadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZBThreadManager.m; path = ../ZBThreadManager.m; sourceTree = "<group>"; };
 		21AD9B461EC04CAD0007CDCD /* ZBBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBBaseTableView.h; path = ../NetWork/ZBBaseTableView.h; sourceTree = "<group>"; };
 		21AD9B471EC04CAD0007CDCD /* ZBBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZBBaseTableView.m; path = ../NetWork/ZBBaseTableView.m; sourceTree = "<group>"; };
 		21AD9B491EC051B30007CDCD /* ZBBaseRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBBaseRequestModel.h; path = ../ZBBase/ZBBaseRequestModel.h; sourceTree = "<group>"; };
@@ -142,19 +148,15 @@
 		049FD7591EBF0CF4000ED538 /* APPKit */ = {
 			isa = PBXGroup;
 			children = (
+				2146C5691F0E0F7C00185388 /* ZBTools */,
 				21AD9B421EC009650007CDCD /* NetWork */,
 				049FD79F1EBF12A6000ED538 /* Controllers */,
-				049FD7A21EBF12A6000ED538 /* Models */,
-				049FD7A71EBF12A6000ED538 /* VIewModels */,
-				049FD7A81EBF12A6000ED538 /* Views */,
 				049FD7A91EBF12A6000ED538 /* ZBBase */,
 				049FD7661EBF0CF4000ED538 /* Assets.xcassets */,
 				043E8C341EBF2492008C0C85 /* Launch Screen.storyboard */,
 				049FD76B1EBF0CF4000ED538 /* Info.plist */,
 				049FD7A31EBF12A6000ED538 /* Other */,
 				049FD75A1EBF0CF4000ED538 /* Supporting Files */,
-				219050AC1F0CCA2100E77627 /* ZBThreadManager.h */,
-				219050AD1F0CCA2100E77627 /* ZBThreadManager.m */,
 			);
 			path = APPKit;
 			sourceTree = "<group>";
@@ -193,13 +195,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		049FD7A21EBF12A6000ED538 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		049FD7A31EBF12A6000ED538 /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,20 +203,6 @@
 				049FD7A61EBF12A6000ED538 /* main.m */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		049FD7A71EBF12A6000ED538 /* VIewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIewModels;
-			sourceTree = "<group>";
-		};
-		049FD7A81EBF12A6000ED538 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		049FD7A91EBF12A6000ED538 /* ZBBase */ = {
@@ -241,6 +222,8 @@
 				049FD7BD1EBF152A000ED538 /* ZBBaseViewController.m */,
 				043E8C3B1EBF3165008C0C85 /* ZBNavigationController.h */,
 				043E8C3C1EBF3165008C0C85 /* ZBNavigationController.m */,
+				2146C56A1F0E12B400185388 /* ZB_BaseTableViewCell.h */,
+				2146C56B1F0E12B400185388 /* ZB_BaseTableViewCell.m */,
 			);
 			path = ZBBase;
 			sourceTree = "<group>";
@@ -260,6 +243,17 @@
 				2041B74CA821AFABB054B5DE /* libPods-APPKit.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2146C5691F0E0F7C00185388 /* ZBTools */ = {
+			isa = PBXGroup;
+			children = (
+				219050AC1F0CCA2100E77627 /* ZBThreadManager.h */,
+				219050AD1F0CCA2100E77627 /* ZBThreadManager.m */,
+				2146C5661F0E0D9100185388 /* ZB_NSProxy.h */,
+				2146C5671F0E0D9100185388 /* ZB_NSProxy.m */,
+			);
+			path = ZBTools;
 			sourceTree = "<group>";
 		};
 		21AD9B421EC009650007CDCD /* NetWork */ = {
@@ -460,11 +454,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2146C56C1F0E12B400185388 /* ZB_BaseTableViewCell.m in Sources */,
 				21AD9B541EC064B10007CDCD /* ZBUploadRequest.m in Sources */,
 				049FD7B71EBF12A6000ED538 /* ZBBaseModel.m in Sources */,
 				21AD9B511EC0628C0007CDCD /* NSObject+zb_request.m in Sources */,
 				049FD7BA1EBF12A6000ED538 /* ZBRootViewController.m in Sources */,
 				049FD7B51EBF12A6000ED538 /* AppDelegate.m in Sources */,
+				2146C5681F0E0D9100185388 /* ZB_NSProxy.m in Sources */,
 				21AD9B481EC04CAD0007CDCD /* ZBBaseTableView.m in Sources */,
 				21AD9B4B1EC051B30007CDCD /* ZBBaseRequestModel.m in Sources */,
 				043E8C3D1EBF3166008C0C85 /* ZBNavigationController.m in Sources */,
